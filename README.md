@@ -11,4 +11,4 @@ This is a repository for our Team's general documentation. Many things belong he
 
 ## What does not go here?
 
-Basically documentation for particular projects, which should live in each project's repository.
+Documentation for particular projects, which should live in each project's repository.
