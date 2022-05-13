@@ -10,7 +10,7 @@ Before you do this be sure that the site referred to in this ticket:
 2. it has been deployed to the live environment
 3. the agcdn domain has been added to the live environment
 
---> see [creating a new site](wiki/Pantheon-creating-a-new-site)
+--> see [creating a new site](Pantheon-creating_a_new_site)
 
 When opening the support ticket simply select the most relevant options from the select boxes etc. Replace SITE_NAME, SITE_PATH, and PANTHEON_SITE_ID in the template with the relevant values.
 
