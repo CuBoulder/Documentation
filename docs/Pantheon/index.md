@@ -30,7 +30,8 @@ To interact with sites you can log in to access University of Colorado Boulder's
 But for development Pantheon has built a tool called [Terminus](https://pantheon.io/docs/terminus). Click the link there to see how to install it if you do not have it already and also to check out its documentation.
 
 After installing terminus be sure to set up a machine token and ssh key as described in the installation docs Once that is done before you run commands with terminus you will have to authenticate:
-```
+
+```zsh
 terminus auth:login --machine-token=YOUR_MACHINE_TOKEN
 ```
 
