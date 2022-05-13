@@ -1,4 +1,4 @@
-# Launching A Site On Pantheon
+# Launching A Site
 
 Launching is our word for publishing a site to the www.colorado.edu domain. To do this you will need:
 
@@ -11,7 +11,7 @@ Launching is our word for publishing a site to the www.colorado.edu domain. To d
 
 ## process
 
-1. [create a site](Pantheon-create_a_site) using the new site name
+1. [create a site](Pantheon-creating_a_site) using the new site name
 2. `terminus plan:set NEW_SITE_NAME "plan-basic_small-contract-annual-1"`
 3. `terminus domain:add NEW_SITE_NAME.live NEW_SITE_NAME.agcdn.colorado.edu`
     - this connects these two domains together so that the site path can be added to the agcdn
