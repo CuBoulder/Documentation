@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: CuBoulder/ghaction-wiki-publish@main
-        if: ${{ github.event.pull_request.merged }}
         with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
