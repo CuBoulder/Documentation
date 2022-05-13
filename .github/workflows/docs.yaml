@@ -15,4 +15,3 @@ jobs:
       - uses: CuBoulder/ghaction-wiki-publish@main
         with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
