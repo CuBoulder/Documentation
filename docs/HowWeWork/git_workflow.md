@@ -48,6 +48,22 @@ git checkout -b hotfix/[issue-key] [tag.for.last-release]
 git push --set-upstream origin hotfix/[issue-key]
 ```
 
+### **Add Commit Message**
+
+```bash
+cd [path/to/git/repo]
+git add -A # stage all changed files
+git commit -m "A short sentence or two stating what has changed."
+```
+
+### **Push Changes to Remote**
+
+(first commit your changes locally)
+
+```bash
+git push origin [branchname] 
+```
+
 ### **Start a Release**
 
 ```bash
