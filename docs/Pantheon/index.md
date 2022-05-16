@@ -51,4 +51,4 @@ After you login (described above):
 
 This is Pantheon's 'Advanced Global Content Delivery Network'. Basically, it is their implementation of Fastly.
 
-The importance of the AGCDN to us is that the domain `www.colorado.edu` is pointed at it and therefore any launched site (a site we want to be accessed via that domain) must be added to this AGCDN first. To learn how to do this, read [launching a site](wiki/Pantheon-launching-a-site).
+The importance of the AGCDN to us is that the domain `www.colorado.edu` is pointed at it and therefore any launched site (a site we want to be accessed via that domain) must be added to this AGCDN first. To learn how to do this, read [launching a site](Pantheon-launching_a_site).
