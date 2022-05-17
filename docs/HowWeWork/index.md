@@ -6,15 +6,15 @@ We are a team of web, devops, and site reliability engineers who make and mainta
 
 The University of Colorado Boulder is a large organization with many different departments. This is a brief illustration of how we fit within the university structure.
 
-### organizational hierarchy outline
+### organizational hierarchy
 
-- CU Boulder ()
+- CU Boulder
   - Strategic Resources and Support (SRS)
     - Strategic Relations and Communications (SRC, our department at CU)
       - Constituent Experience and Technology (CXT, our division of SRC)
         - **Development and Operations** (This is us! AKA Web Team)
 
-### Other teams in SRC include:
+### Other teams in SRC include
 
 - News (most of which are posted on <http://www.colorado.edu/today>)
 - Media Relations and spokespeople
