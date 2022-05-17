@@ -1,6 +1,6 @@
 # Project Management
 
-We use github for our project management, as well as code management. You will need a github account. Once you do you will get an invitation to join our organization and gain access to our repositories and project boards.
+We use github for our project management, as well as code management, in a _Kanban-esque_ fashion. You will need a github account. Once you do you will get an invitation to join our organization and gain access to our repositories and project boards.
 
 ## projects
 
@@ -9,7 +9,7 @@ There are 2 main projects that we use for project management:
 1. [Development](https://github.com/orgs/CuBoulder/projects/16)
 2. [Operations](https://github.com/orgs/CuBoulder/projects/15)
 
-Both of them have the same basic outline of 5 columns:
+Both of them have the same basic outline of 5 columns. As we plan and work on issues the cards on this board are moved around, which changes issue status to match the column.
 
 1. Backlog
     - work items that we are not actively working on but know we will at some point
@@ -25,7 +25,8 @@ Both of them have the same basic outline of 5 columns:
     - keep notes on your work in these issues
 4. In Review
     - when you think you are done your issue card goes in this column
-    - these issues should now have a PR associated with them and reviewers assigned to it
+    - create a PR and link it to your issue
+    - make sure you add reviewers to the pr
     - use the pr for notes related to code review
 5. Done
     - work on these issues is completed and the code is merged into dev
@@ -43,7 +44,6 @@ Also, individually or in conversations outside of our project management meeting
 1. Move an issue that is assigned to you into In Progress when you start work on it
 2. Create a linked pr and move the issue to In Review when you think you are done and want it to be reviewed
 3. If you are done with your issues and are looking for more work, grab an unassigned issue from Todo, asssign it to yourself and move it into In Progress to start working on it
-
 
 ## Documentation
 
