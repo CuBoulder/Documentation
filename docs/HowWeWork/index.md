@@ -1,4 +1,22 @@
-# Team Philosophy
+# How We Work
+
+We are a team of web, devops, and site reliability engineers who make and maintain tools for building websites and web applications for the University of Colorado Boulder community.
+
+## our projects
+
+The main projects we are working on now are listed below. We often have other things happening as well, but this is where our current focus is.
+
+1. New CMS
+    - We are building a new version of our Web Express CMS which is designed to allow site builders and editors, who likely do not know how to code, to build rich web experiences through www.colorado.edu branded websites.
+    - It is built using Drupal 9.
+2. Migration of sites from old D7 Web Express to new CMS
+    - In addition to 1. above, this includes migration of databases, files and training of users of the new CMS, among other things.
+3. Oghma
+    - This is a new application and API that will be the center of knowledge and management tool for our websites
+4. Old Drupal 7 based CMS.
+    - This is a powerful tool that our clients have come to rely on for many things.
+    - Drupal 7 is coming up against end of life date
+    - Needs to be updated to new tool
 
 ## team values
 
@@ -22,8 +40,12 @@
 ## guiding principles
 
 - Heroic efforts are not a sustainable resource, we work to avoid them
-- We are all learning, no dumb questions. Only dumb mistake is going too fast.
-- Fast follow. We don't want to deal with the cost of being on the - bleeding edge, but we want to quickly move to new technology that is appearing as a winner.
+- We are all learning
+  - no dumb questions
+  - only dumb mistake is going too fast
+- Fast follow
+  - we don't want to deal with the cost of being on the - bleeding edge
+  - however, we want to quickly move to new technology that is appearing as a winner
 - Create projects that are usable by people with the widest possible range of abilities, operating within the widest possible range of situations
 - Safeguard the privacy and security of our users
 - Only retain data that we can securely and responsibly store
