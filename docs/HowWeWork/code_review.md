@@ -18,6 +18,16 @@ The general rule of thumb for our team is that you do not merge your own code.  
 
 Note that code reviews are intentionally classless - that is to say that being the most senior person on the team does not imply that your code does not need to be reviewed.  Even if, in the rare case, code is flawless, the review process affords other members of the team an opportunity for mentorship and collaboration additionally the process necessarily diversifies the understanding of the code base amongst the team.
 
+### Get the Code for a Review
+
+There are a some things you will need, based on the project you are reviewing, before you can begin. For example you may need a working Drupal instance, an active python virtual environment, or another project dependency. Whatever the project is, make sure that your working directory matches as closely as possible that of the author's of the PR. This way your testing will be as effective as possible.
+
+- have your code tied to the correct remote repo for the PR
+- make sure you have checked out the feature branch
+- make sure you have pulled down the most recent changes
+- do not make and push any changes to the code yourself
+- any changes should be suggested in the PR's comments
+
 ## Preparing Code For Review
 
 It is the author’s responsibility to submit CRs that are easy to review in order to not waste the reviewers’ time and goodwill:

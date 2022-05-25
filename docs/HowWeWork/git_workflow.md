@@ -1,4 +1,5 @@
 # Git Workflow
+
 [Quick Visualization](https://docs.google.com/a/colorado.edu/drawings/d/1RAm8Xrvke9r-N1uMoWq_18XQBFo4fhVZ_lPw7t4k0w0/edit?usp=sharing)
 
 ## Permanent Branches
