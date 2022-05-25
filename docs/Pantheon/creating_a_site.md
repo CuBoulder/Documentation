@@ -15,4 +15,6 @@ you will need a number of things to create a new site:
 3. Initialize all environments:
     1. `terminus env:deploy -- SITE_NAME.test`
     2. `terminus env:deploy -- SITE_NAME.live`
+    3. `terminus env:clone-content SITE_NAME.dev test --yes --updatedb --cc
+    4. `terminus env:clone-content SITE_NAME.test live --yes --updatedb --cc
 4. The site is now available at `https://live-SITE_NAME.pantheonsite.io`
