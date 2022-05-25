@@ -45,6 +45,21 @@ Also, individually or in conversations outside of our project management meeting
 2. Create a linked pr and move the issue to In Review when you think you are done and want it to be reviewed
 3. If you are done with your issues and are looking for more work, grab an unassigned issue from Todo, asssign it to yourself and move it into In Progress to start working on it
 
-## Documentation
+## Document your work
 
-Always document what you have been working on in your issues by adding notes liberally as well as informative commit messages. **Good descriptions in your prs are required** as that is what we take to create regular changelogs to document our accomplishments as well as periodic releases.
+We document our own work. This is important for many reasons. One thing in particular we want to avoid is poor communication due to the belief that the solutions, techniques, and functionality of code you are working on are 'obvious'. A great places to clarify your decisions and goals are in issue/pr descriptions and comments.
+
+### issues
+
+Always document what you have been working on in your issues by adding notes liberally. This may include:
+
+- related questions for and conversations with other team members
+- decisions for solutions for the problem(s) in an issue
+- **Good descriptions in your prs are required** but keep them relatively short.
+
+### pull requests (prs)
+
+Pull requests need a clear outline and description of the work completed for the following reasons:
+
+- These are used to generate changelogs that document our work completed between releases.
+- Reviewers will use this to help review the code submitted. Clear writing can help make this as easy as possible.
