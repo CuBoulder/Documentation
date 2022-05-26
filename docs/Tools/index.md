@@ -56,7 +56,7 @@ There are others worth consideration but the above are used by team members and 
 
 ### **Development stacks**
 
-We need working LAMP stacks for our Drupal projects. This is largely provided for by Lando (see below). Other projects we, for example those for Python projects, can normally be developed on our macs directly, with the understanding that their production environments will likely be Linux based.
+We need working LAMP stacks for our Drupal projects. This is largely provided for by Lando (see below). Non-Drupal projects, for example and API built with Python, can normally be developed on our macs directly, with the understanding that their production environments will likely be Linux based.
 
 #### **_databases_**
 
