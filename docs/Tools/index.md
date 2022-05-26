@@ -1,0 +1,102 @@
+# Tools
+
+We are provided a Macbook Pro for our work here at CU Boulder. These docs are meant for macOS. If you prefer another OS this documention may not be accurate.
+
+## Most common tools
+
+Here is a basic list of tools and technologies that we use frequently:
+
+### **Version control**
+
+- git
+
+### **IDEs**
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+  - free and very capable
+  - most of us here use it
+- [JetBrains](https://www.jetbrains.com/)
+  - not free but great IDEs
+  - PhpStorm
+  - PyCharm
+  - WebStorm
+  
+There are others worth consideration but the above are used by team members and have been proven to work well for us.
+
+### **languages**
+
+- PHP
+- [Composer](https://getcomposer.org/)
+  - PHP package management
+- Python
+- [pip](https://pip.pypa.io/en/stable/)
+  - Python package management
+- [venv](https://docs.python.org/3/library/venv.html)
+  - used for creating virtural environments for local Python development (included with Python now)
+- [Node](https://nodejs.org/en/)
+  - mainly used for running automated tests via Playwrite
+  - you might use it for command line apps or APIs, too
+- [Npm](https://www.npmjs.com/)
+  - for node/javascript package management
+- Javascript
+- CSS
+  - for a few of its modern features check [this](https://css-tricks.com/whats-new-since-css3/) out
+- HTML
+  - this includes templating languages [Twig](https://twig.symfony.com/) (PHP) and [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) (python)
+
+### **Frameworks**
+
+- [Drupal](https://drupal.org)
+  - although this is commonly referred to as a CMS, it is perhaps more accurately described as a Content Management Framework
+- [Symfony](https://symfony.com/)
+  - PHP framework that Drupal is built on top of
+  - although you might not often use it directly, it would be good to get to know it
+- [FastAPI](https://fastapi.tiangolo.com/)
+  - Python framework for building API's and applications
+
+### **Development stacks**
+
+We need working LAMP stacks for our Drupal projects. This is largely provided for by Lando (see below). Other projects we, for example those for Python projects, can normally be developed on our macs directly, with the understanding that their production environments will likely be Linux based.
+
+#### **_databases_**
+
+Although Lando more or less takes care of setting up databases, there may be a specific need in a project for you set one up yourself.
+
+Typically we use:
+
+- mariaDb
+- mysql
+- sqlite
+
+## Beginning set up
+
+There are 2 technologies that we use for installing and/or using these languages: Homebrew and Lando. Generally, we do not need to install Xcode or Xcode tools.
+
+### _homebrew_
+
+[Homebrew](https://brew.sh/) is the 'traditional' route to getting most of the things listed above installed. Copy the snippet on their homepage to install it. Please check out their documentation as well.
+
+To start with, you can install the following items. You can install more as needed for the projects you are working on.
+
+```bash
+brew install git
+brew install php
+brew install composer
+brew install python@3.10
+brew install node
+```
+
+### _Lando_
+
+[Lando](https://lando.dev/) is a container managment tool that really helps software development go smoothly. Basically, it installs Docker and creates a container, with a complete development stack, for your application. This is very convenient for working with Drupal as it handles OS, server, database, and PHP for us.
+
+To install it select the [latest release](https://github.com/lando/lando/releases). The installers are found in the 'assets' section. Download and run the appropriate installer for your computer:
+
+- If you have a new Mx based mac be sure to download the arm .dmg
+- If you have an older Intel mac download the x64 .dmg
+
+Be sure to checkout the Lando [documentation](https://docs.lando.dev/) for to get an idea for what it can do.
+
+## Other tool docs
+
+Be sure to check out, and update as needed, the documentation we have for specific tools and how we typically get them set up for our projects.
