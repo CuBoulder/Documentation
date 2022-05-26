@@ -32,16 +32,28 @@ There are a some things you will need, based on the project you are reviewing, b
 
 It is the author’s responsibility to submit CRs that are easy to review in order to not waste the reviewers’ time and goodwill:
 
+- **Give Context**
+  - In your PR's description or comments add links to related PRs and issues to help group related work together. There are 2 syntaxes for doing this. Github will create a short link for each to the desired issue/PR:
+    - If the issue/PR to link to is in the same repository:
+      - simply type: `#ISSUE_OR_PR_NUMBER`
+    - If the issue/PR is in a different CuBoulder repository:
+      - type: `CuBoulder/REPOSITORY_NAME#PR_NUMBER`
+
+  - An example of something you could put in a description comment:
+
+    ```text
+    related PR: CuBoulder/Oghma#4
+    ```
+
+    Which will look like:
+
+    - related PR: CuBoulder/Oghma#4  
+
 - **Size and scope**
-
   - Changes should be narrow in scope and hand a well defined purpose.  A change may implement a new feature or fix a bug and shorter changes are preferred over longer ones.  If a CR makes substantive changes to more than a handful of files or would take more than about 20 minutes to review, consider splitting it into multiple self-contained CRs.
-
 - **Only submit complete, self-reviews and self-tested CRs**
-
   - Remember that it is the responsibility of the author to make the first review.  CRs are not the place to find typos and styling issues, they should be used to validate code, find logic problems and improve collaboration and team cross-training.  
-  
 - **When refactoring code you should not alter the behavior of the code**
-
   - Conversely behavior-changing code should avoid refactoring code.  Each CR should attempt to follow the unix motto - do one thing and do it well.  This will help to ensure that code is reviewed correctly and efficiently.  
 
 ## Commit Messages
