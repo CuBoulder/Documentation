@@ -50,7 +50,7 @@ There are others worth consideration but the above are used by team members and 
   - although this is commonly referred to as a CMS, it is perhaps more accurately described as a Content Management Framework
 - Symfony
   - PHP framework that Drupal is built on top of
-  - although you might not often use it directly, it would be good to  
+  - although you might not often use it directly, it would be good to get to know it
 - FastAPI
   - Python framework for building API's and applications
 - Vue
