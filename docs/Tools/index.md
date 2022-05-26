@@ -6,11 +6,24 @@ We are provided a Macbook Pro for our work here at CU Boulder. These docs are me
 
 Here is a basic list of tools and technologies that we use frequently:
 
-### Version control
+### **Version control**
 
 - git
 
-### languages
+### **IDEs**
+
+- Visual Studio Code
+  - free and very capable
+  - most of us here use it
+- JetBrains
+  - not free but great IDEs
+  - PhpStorm
+  - PyCharm
+  - WebStorm
+  
+There are others worth consideration but the above are used by team members and have been proven to work well for us.
+
+### **languages**
 
 - PHP
 - Composer
@@ -31,9 +44,9 @@ Here is a basic list of tools and technologies that we use frequently:
 - HTML
   - this includes templating languages Twig (PHP) and Jinja(python)
 
-## Frameworks
+### **Frameworks**
 
-- **Drupal**
+- Drupal
   - although this is commonly referred to as a CMS, it is perhaps more accurately described as a Content Management Framework
 - Symfony
   - PHP framework that Drupal is built on top of
@@ -44,11 +57,11 @@ Here is a basic list of tools and technologies that we use frequently:
   - web components
   - cool front-end applications
 
-## Development stacks
+### **Development stacks**
 
-We need working LAMP stacks for our Drupal projects. This is largely provided for by Lando (see below)
+We need working LAMP stacks for our Drupal projects. This is largely provided for by Lando (see below). Other projects we, for example those for Python projects, can normally be developed on our macs directly, with the understanding that their production environments will likely be Linux based.
 
-### databases
+#### **_databases_**
 
 Although Lando more or less takes care of setting up databases, there may be a specific need in a project for you set one up yourself.
 
@@ -58,9 +71,9 @@ Typically we use:
 - mysql
 - sqlite
 
-## Set up
+## Beginning set up
 
-There are 2 technologies that we use for installing and/or using these languages: Homebrew and Lando.
+There are 2 technologies that we use for installing and/or using these languages: Homebrew and Lando. Generally, we do not need to install Xcode or Xcode tools.
 
 ### _homebrew_
 
@@ -78,6 +91,15 @@ brew install node
 
 ### _Lando_
 
-Lando is a container managment tool that really helps a lot of software development go smoothly. Basically, it installs Docker and creates a container, with a complete development stack, for your application. This is very convenient for working with Drupal as it handles OS, server, database, and PHP for us.
+Lando is a container managment tool that really helps software development go smoothly. Basically, it installs Docker and creates a container, with a complete development stack, for your application. This is very convenient for working with Drupal as it handles OS, server, database, and PHP for us.
 
-Install it and then checkout the documentation for getting a Drupal instance up and running.
+To install it select the [latest release](https://github.com/lando/lando/releases). The installers are found in the 'assets' section. Download and run the appropriate installer for your computer:
+
+- If you have a new Mx based mac be sure to download the arm .dmg
+- If you have an older Intel mac download the x64 .dmg
+
+Be sure to checkout the Lando [documentation](https://docs.lando.dev/) for to get an idea for what it can do.
+
+## Other tool docs
+
+Be sure to check out, and update as needed, the documentation we have for specific tools and how we typically get them set up for our projects.
