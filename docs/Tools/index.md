@@ -88,7 +88,7 @@ brew install node
 
 ### _Lando_
 
-Lando is a container managment tool that really helps software development go smoothly. Basically, it installs Docker and creates a container, with a complete development stack, for your application. This is very convenient for working with Drupal as it handles OS, server, database, and PHP for us.
+[Lando](https://lando.dev/) is a container managment tool that really helps software development go smoothly. Basically, it installs Docker and creates a container, with a complete development stack, for your application. This is very convenient for working with Drupal as it handles OS, server, database, and PHP for us.
 
 To install it select the [latest release](https://github.com/lando/lando/releases). The installers are found in the 'assets' section. Download and run the appropriate installer for your computer:
 
