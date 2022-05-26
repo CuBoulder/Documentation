@@ -12,10 +12,10 @@ Here is a basic list of tools and technologies that we use frequently:
 
 ### **IDEs**
 
-- Visual Studio Code
+- [Visual Studio Code](https://code.visualstudio.com/)
   - free and very capable
   - most of us here use it
-- JetBrains
+- [JetBrains](https://www.jetbrains.com/)
   - not free but great IDEs
   - PhpStorm
   - PyCharm
@@ -26,36 +26,33 @@ There are others worth consideration but the above are used by team members and 
 ### **languages**
 
 - PHP
-- Composer
+- [Composer](https://getcomposer.org/)
   - PHP package management
 - Python
-- pip
+- [pip](https://pip.pypa.io/en/stable/)
   - Python package management
-- venv
+- [venv](https://docs.python.org/3/library/venv.html)
   - used for creating virtural environments for local Python development (included with Python now)
-- Node
+- [Node](https://nodejs.org/en/)
   - mainly used for running automated tests via Playwrite
   - you might use it for command line apps or APIs, too
-- Npm
+- [Npm](https://www.npmjs.com/)
   - for node/javascript package management
 - Javascript
 - CSS
   - for a few of its modern features check [this](https://css-tricks.com/whats-new-since-css3/) out
 - HTML
-  - this includes templating languages Twig (PHP) and Jinja(python)
+  - this includes templating languages [Twig](https://twig.symfony.com/) (PHP) and [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) (python)
 
 ### **Frameworks**
 
-- Drupal
+- [Drupal](https://drupal.org)
   - although this is commonly referred to as a CMS, it is perhaps more accurately described as a Content Management Framework
-- Symfony
+- [Symfony](https://symfony.com/)
   - PHP framework that Drupal is built on top of
   - although you might not often use it directly, it would be good to get to know it
-- FastAPI
+- [FastAPI](https://fastapi.tiangolo.com/)
   - Python framework for building API's and applications
-- Vue
-  - web components
-  - cool front-end applications
 
 ### **Development stacks**
 
