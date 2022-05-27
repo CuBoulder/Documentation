@@ -174,7 +174,8 @@ git clone https://github.com/CuBoulder/nextpress-project-template <project-name>
 
 cd <project-name>
 
-open .lando.yml file and replace the name value on line 1 with your project name
+open .lando.yml file and replace the name value on line 1 with your project name.
+This is what docker will use to build your container, so be sure to make the project name unique from other containers.
 
 lando start             # this command will take a while if it's the first it's being run
 lando install-site      # this installs Drupal
