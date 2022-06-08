@@ -61,20 +61,23 @@ The main projects we are working on now are listed below. We often have other th
 ## what we expect from each other
 
 - Ask lots of questions. Always feel free to ask why something is the way it is
+  - Note that a lot of the tools we use are idiosyncratic (aka "Drupalisms").  If something seems opaque or unclear it's not a failing on your part, it just means the team hasn't explained those quirks to you yet
 - Respond to questions in a timely manner
+- Commit early; commit often.  All of your work should be added to a a development branch in a repo and you should be commiting your work to your working branch frequently even before it is ready to be reviewed and merged into the main branch.
 - Take ownership of parts of our work and gain deep knowledge on one or more projects
 - Give and receive useful constructive feedback. We all need to work together to make things better
 - Let your manager (and team mates) know about problems before they become nightmares: tickets, people, projects, meetings, committees, etc
-- Work during normal hours (don't feel the need to respond to email or slack in the evenings)
+- Work during normal hours (don't feel the need to respond to email or MS Teams in the evenings)
 - Take time off
-- When you are off, be fully off; no email or Microsoft Teams etc.
+- When you are off, be fully off; no email or Microsoft Teams etc
 
 ## guiding principles
 
 - Heroic efforts are not a sustainable resource, we work to avoid them
 - We are all learning
+  - the web is constantly changing with new standards, tools and technologies, which requires all of us to invest in continuous learning
   - no dumb questions
-  - only dumb mistake is going too fast
+- Don't beat your head against the wall until the wall crumbles -- instead reach out for help from your team to get over, under or around the wall
 - Fast follow
   - we don't want to deal with the cost of being on the - bleeding edge
   - however, we want to quickly move to new technology that is appearing as a winner
@@ -83,4 +86,4 @@ The main projects we are working on now are listed below. We often have other th
 - Only retain data that we can securely and responsibly store
 - Work on impactful projects in an iterative manner, using emerging best-in-class tools
 - Clearly communicate our work via documentation, changelogs, and standardized processes
-- Work as a team and minimize dependencies on single people
+- Work as a team and minimize dependencies on individual team members (cross-train and diversify responsibility) 
