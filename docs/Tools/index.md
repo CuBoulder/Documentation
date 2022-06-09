@@ -70,7 +70,18 @@ Typically we use:
 
 ## Beginning set up
 
-There are 2 technologies that we use for installing and/or using these languages: Homebrew and Lando. Generally, we do not need to install Xcode or Xcode tools.
+There are 2 technologies that we use for installing and/or using these languages: Homebrew and Lando. Generally, we do not need to install Xcode, however we will need to get access to the "Command Line Tools", commonly bundled with XCode.
+
+### Command Line Tools
+Since Apple’s OS X is based on UNIX, you can run many of the UNIX commands on your Mac right from the Terminal app. In order to use these UNIX commands on your Mac, you need to have a utility called “Command Line Tools” installed on your machine. By default, OS X does not ship with this utility installed. One way to install Command Line Tools it is to install Xcode, and it will install these commands as well. However, Xcode is heavy in filesize an often takes hours to fully install on your machine so the full installation is not recommended unless it is absolutely necessary. 
+
+To get Command Line Tools quickly without XCode, open Terminal and run the following command:
+
+```
+xcode-select --install
+```
+
+You will be prompted asking if you would like to install the command line tools on your machine. Click on the “Install” button.Read the license agreement on the following screen and click on “Agree” to move forward. When the tools are downloaded, click on “Done” in the dialog box to complete the installation. Congratulations, the command line tools are successfully installed without requiring you to install Xcode!
 
 ### _homebrew_
 
