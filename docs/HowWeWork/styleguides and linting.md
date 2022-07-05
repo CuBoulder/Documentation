@@ -39,7 +39,7 @@ Below are the standard languages we use for the work within our department as we
 
 ## Linting
 
-We currently have linters set up for the following: 
+We currently have linters set up for the following all using super-lint: 
 
 - Javascript using eslint
 - CSS using stylelint
@@ -48,35 +48,33 @@ We currently have linters set up for the following:
 
 We also have special rules set up for Javascript and CSS
 
-### Javascript Rules(eslint)
+### Javascript Rules (eslint)
 
 ```
-"rules": {
-      "indent": ["error", 2],
-      "linebreak-style": ["error", "unix"],
-      "quotes": ["error", "double"],
-      "semi": ["error", "always"]
-    }
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"]
 ```
 
 ### CSS Rules (stylelint)
 
 ```
-"rules": {
-    "indentation": [
-      2,
-      {
-        "except": ["value"],
-        "severity": "error",
-        "ignore": ["param"],
-        "indentClosingBrace": false
-      }
-    ],
+
+"indentation": [
+    2,
+    {
+    "except": ["value"],
+    "severity": "error",
+    "ignore": ["param"],
+    "indentClosingBrace": false
+    }
+
     "declaration-colon-space-after": "always-single-line",
     "declaration-colon-newline-after": "always-multi-line",
     "no-descending-specificity": null,
     "max-nesting-depth": 2,
     "declaration-no-important": true,
     "declaration-block-no-duplicate-properties": true
-  }
+
 ```
