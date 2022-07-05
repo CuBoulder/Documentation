@@ -50,6 +50,16 @@ The main projects we are working on now are listed below. We often have other th
     - Drupal 7 is coming up against end of life date
     - Needs to be updated to new tool
 
+## development principles  
+
+Particularly with respect to Drupal development, but for custom development we alway attempt to : 
+
+- Keep it simple
+- Keep it close to core
+- Keep it secure
+- Keep it scalable
+- Keep improving
+
 ## team values
 
 - We are transparent by default
