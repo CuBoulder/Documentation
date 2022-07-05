@@ -50,15 +50,18 @@ We also have special rules set up for Javascript and CSS
 
 ### Javascript Rules(eslint)
 
+```
 "rules": {
       "indent": ["error", 2],
       "linebreak-style": ["error", "unix"],
       "quotes": ["error", "double"],
       "semi": ["error", "always"]
     }
+```
 
 ### CSS Rules (stylelint)
 
+```
 "rules": {
     "indentation": [
       2,
@@ -76,3 +79,4 @@ We also have special rules set up for Javascript and CSS
     "declaration-no-important": true,
     "declaration-block-no-duplicate-properties": true
   }
+```
