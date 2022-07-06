@@ -52,7 +52,7 @@ The main projects we are working on now are listed below. We often have other th
 
 ## development principles  
 
-Particularly with respect to Drupal development, but for custom development we alway attempt to : 
+Particularly with respect to Drupal development, but for custom development we always attempt to : 
 
 - Keep it simple
 - Keep it close to core
