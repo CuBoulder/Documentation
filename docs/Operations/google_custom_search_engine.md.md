@@ -52,6 +52,12 @@ To do this the site owner must initiate a site search request. We get these requ
 - update value of the variable "$conf["google_cse_cx"]" to the Search engine ID you copied earlier.
 - add, commit, and push the code back up to master (on Pantheon)
 
+## Final step
+
+The site owner, or one of us, needs to log into the site and make sure the search functionality is set to search this site.
+
+go to -> admin/settings/search/search-settings on the site and make the desired settings and then save them.
+
 ## That is it
 
 The site should get search results as soon as google finishes indexing the site. These results will contain adds until the mcappaccess@colorado.edu user is verified. 
@@ -61,3 +67,4 @@ The site should get search results as soon as google finishes indexing the site.
 It would be nice to know who actually verifies the mcappaccess@colorado.edu user and maybe gain some control over that process ourselves.
 
 Refine the setup steps with some automation. Do the dashboards mentioned above offer api's?
+`
