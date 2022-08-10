@@ -1,4 +1,4 @@
-# Goole Custom Search Engine
+# Google Custom Search Engine
 
 All express sites have the ability to add search functionality using google's search engine. By default, the search functionality works of of everything found on www.colorado.edu, which google indexes. 
 
