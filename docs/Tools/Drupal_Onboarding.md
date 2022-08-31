@@ -105,7 +105,7 @@ Contributed modules come from [Packagist](https://packagist.org/), the main comp
 
 ### Theme Development
 
-[Themes](https://www.drupal.org/docs/theming-drupal) give a site its look. The theme installed by default is the CU Boulder site theme. In the `/themes` directory of your `tiamat project` you will both contributed and our custom CU Boulder theme which includes CSS, JS, Twig Templates, external libraries like BootStrap and FontAwesome and more! Here is where you will build out Twig templates, build CSS and JS files for your pages, and link those newly created files to our `ucb2021_base.libraries.yml`
+[Themes](https://www.drupal.org/docs/theming-drupal) give a site its look. The theme installed by default is the CU Boulder site theme. In the `/themes` directory of your `tiamat project` you will both contributed and our custom CU Boulder theme which includes CSS, JS, Twig Templates, external libraries like BootStrap and FontAwesome and more! Here is where you will build out Twig templates, build CSS and JS files for your pages, and link those newly created files to our `boulderD9_base.libraries.yml`
 
 ### Module Development
 
