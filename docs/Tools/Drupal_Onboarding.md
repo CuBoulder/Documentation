@@ -22,26 +22,26 @@ Run `which composer` to check if composer is installed. If it's not installed, [
 
 ### Intalling Lando & Docker
 
-Lando is a local environment tool that runs on Docker to create a container for a website. Open terminal and type `which lando`. If a path is printed, then you already have lando installed and can go to the next step. Otherwise, follow the steps to [install Docker](https://docs.docker.com/desktop/mac/install/) and then [install Lando](https://docs.lando.dev/basics/installation.html#macos). Both of these are needed to launch your own nextpress project template!
+Lando is a local environment tool that runs on Docker to create a container for a website. Open terminal and type `which lando`. If a path is printed, then you already have lando installed and can go to the next step. Otherwise, follow the steps to [install Docker](https://docs.docker.com/desktop/mac/install/) and then [install Lando](https://docs.lando.dev/basics/installation.html#macos). Both of these are needed to launch your own tiamat project template!
 
 ### Drush
 
-[Drush](https://www.drush.org/latest/) is a command line utility for interacting with a Drupal site. It’s extremely useful and learning the commands will make development much faster. Since the dev site is using Lando, we must prefix all drush commands with lando, as you will see in some commands in the nextpress section.
+[Drush](https://www.drush.org/latest/) is a command line utility for interacting with a Drupal site. It’s extremely useful and learning the commands will make development much faster. Since the dev site is using Lando, we must prefix all drush commands with lando, as you will see in some commands in the tiamat section.
 
 ---
 
 ## Site Development
 
-### Contributing Code - Nextpress
+### Contributing Code - Tiamat (boulder_d9_base)
 
-We use our [nextpress project template](https://github.com/CuBoulder/nextpress-project-template) to quickly get a development version of nextpress (Drupal running off a Lando container in Docker) running. DO NOT use this branch in production! The production composer.\* files can be found on the production branch.
+We use our [tiamat project template](https://github.com/CuBoulder/tiamat-project-template) to quickly get a development version of tiamat (Drupal running off a Lando container in Docker) running. DO NOT use this branch in production! The production composer.\* files can be found on the production branch.
 
-### Nextpress Installation
+### Tiamat Installation
 
 ```
 composer -V             # verify that your machine has composer 2.x installed
 
-git clone https://github.com/CuBoulder/nextpress-project-template <project-name>
+git clone https://github.com/CuBoulder/tiamat-project-template <project-name>
 
 cd <project-name>
 
@@ -58,7 +58,9 @@ Other useful commands:
 ```
 lando info   ##Prints info about your app including urls to visit your page, database info and more
 
-lando drush pmu simplesamlphp_auth 	 ## allows local logins and disables SSO
+lando nosso  ## allows local logins and disables SSO via command
+
+lando drush pmu simplesamlphp_auth 	 ## allows local logins and disables SSO via direct uninstall
 
 ```
 
@@ -103,7 +105,7 @@ Contributed modules come from [Packagist](https://packagist.org/), the main comp
 
 ### Theme Development
 
-[Themes](https://www.drupal.org/docs/theming-drupal) give a site its look. The theme installed by default is the CU Boulder site theme. In the `/themes` directory of your `nextpress project` you will both contributed and our custom CU Boulder theme which includes CSS, JS, Twig Templates, external libraries like BootStrap and FontAwesome and more! Here is where you will build out Twig templates, build CSS and JS files for your pages, and link those newly created files to our `ucb2021_base.libraries.yml`
+[Themes](https://www.drupal.org/docs/theming-drupal) give a site its look. The theme installed by default is the CU Boulder site theme. In the `/themes` directory of your `tiamat project` you will both contributed and our custom CU Boulder theme which includes CSS, JS, Twig Templates, external libraries like BootStrap and FontAwesome and more! Here is where you will build out Twig templates, build CSS and JS files for your pages, and link those newly created files to our `ucb2021_base.libraries.yml`
 
 ### Module Development
 
@@ -115,23 +117,23 @@ Much of module development is looking at existing module source code and using t
 
 ## Site Development
 
-### Nested Repositories within NextPress
+### Nested Repositories within Tiamat
 
-Starting the app for the first time will install all the composer dependencies and clone down all of the CU Boulder modules. Even though the modules are composer packages, they are cloned with git so we can do development work on them. These modules include `ucb2021_base`, `ucb2021_profiles`, `ucb_custom_paragraphs`, `ucb_custom_page_types`, and `ucb_shortcodes`.
+Starting the app for the first time will install all the composer dependencies and clone down all of the CU Boulder modules. Even though the modules are composer packages, they are cloned with git so we can do development work on them. These modules include `tiamat-custom-entities`, `tiamat-profile`, and our custom UCB modules such as `ucb_default_content` which are stored within `modules/custom`.
 
-### Branching with Nextpress
+### Branching with Tiamat
 
 In order to test a PR or to develop for a new issue/feature/bug, you will need to switch to the appropriate branches on each repository. Depending on the ticket assigned for review or developement, your work may touch one or more of these repos.
 
 The repos you may need to check are:
 
-- `themes/custom/ucb_base`
-- `modules/custom/ucb_custom_page_types`
-- `modules/custom/ucb_custom_paragraphs`
-- `modules/custom/ucb_shortcodes`
-- `profiles/custom/ucb2021_profile`
+- `themes/custom/boulder_d9_base`
+- `modules/custom/ucb_d9_custom_entities`
+- `profiles/custom/boulder_d9_profile`
+- `modules/custom/**` (For work with custom modules)
 
-Make sure your repos are up to date before creating a branch with `git fetch -a` and then checkout the available branches with `git branch -a` in the above repo locations within the nextpress project to confirm your local project is up to date with the remote repo with the most current available remote branches. Run a `git status` to make sure you are up to date, `git pull` any changes if not.
+
+Make sure your repos are up to date before creating a branch with `git fetch -a` and then checkout the available branches with `git branch -a` in the above repo locations within the tiamat project to confirm your local project is up to date with the remote repo with the most current available remote branches. Run a `git status` to make sure you are up to date, `git pull` any changes if not.
 
 To checkout to a branch for code review, run the following on each repo that may have new code, which includes the 5 above repos:
 
@@ -141,7 +143,7 @@ git checkout -b <LOCALBRANCHNAME> origin/<REMOTEBRANCHNAME>
 
 ### Pushing Code
 
-Once you have something ready for commit, or you have code that is tested, working, and ready for a pull request-- the code push process works as you would expect. In each of the repos that resides in our nextpress project, we will need to push that new code to its respective remote repository. Do not push to nextpress remote repo, just the afformentioned custom repositories that reside within your nextpress project.
+Once you have something ready for commit, or you have code that is tested, working, and ready for a pull request-- the code push process works as you would expect. In each of the repos that resides in our tiamat project, we will need to push that new code to its respective remote repository. Do not push to tiamat remote repo, just the afformentioned custom repositories that reside within your tiamat project.
 
 `cd` into any repository that you have been working in. You can run `git status` in each custom repo to see what files were modified. `git add <filename>` any files you have changed that are included in the ticket, and `git push` to the respective branch in that remote repository.
 
