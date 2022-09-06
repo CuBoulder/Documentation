@@ -10,16 +10,21 @@ To do this the site owner must initiate a site search request. We get these requ
 
 ### got to [programmable search](https://cse.google.com/cse/all) console
 
+This documentation uses the 'new Control Panel'. If you are using the 'legacy Control Panel' please make the switch to the new one.
+
 - sign in with websupport@colorado.edu username and password (password is found in KeePassXC osrWeb.kbdx database)
-- click "New Search Engine" found on left sidebar
-- set "Site to search" to Colorado.edu/PathOfSiteToSearch
-- set "name of the search engine" to Colorado.edu/PathOfSiteToSearch
-- click "create"
-- See Message: "Congratulations! You've successfully created your Custom search engine"
-- Click button "Control Panel"
+- click "Add" 
+- in "Name your search engine" set search engine name to "Colorado.edu/PathOfSiteToSearch"
+- in "What to Search?" set "enter a site or pages" to "Colorado.edu/PathOfSiteToSearch" and click "create"
+    - make sure "Search specific sites or pages" is selected
+- click "Add"
+- See confirmation that your new search engine has been created
+- Click "Customize"
 - Copy the Search engine ID for later
-- Click Users tab
-- Add a user to your custom search engine: mcappaccess@colorado.edu as an administrator. (This step is needed to get ad-free search)
+- Click Members in left sidebar
+- Add a member to your custom search engine: mcappaccess@colorado.edu as an administrator. (This step is needed to get ad-free search)
+- Click on Search Features->Advanced Settings tab in the left sidebar
+- Click on Web Search settings and set "Query parameter name" to "cse
 - Create a ServiceNow ticket for the Messaging and Collaboration team using HelpScout to email help@colorado.edu
   - To send email from HelpScout: Change Customer to IT Service Center. Click the "Reply" icon in the upper left. Compose email and send. Keep the ticket open; HelpScout will close it when email is sent.
 >
@@ -38,7 +43,7 @@ To do this the site owner must initiate a site search request. We get these requ
 ### go to [search console](https://search.google.com/search-console?hl=en&utm_source=wmx&utm_medium=deprecation-pane&utm_content=home&resource_id=https://www.colorado.edu/)
 
 - you have to be authenticated as websupport@colorado.edu
-  - click "Settings" down towords the bottom of left sidebar
+  - click "Settings" down towards the bottom of left sidebar
   - click "ownership verification" and do what you need to do
 - click "Sitemaps" in the left sidebar
 - add a new sitemap by typing the site's path + "/sitemap.xml" and submit it.
