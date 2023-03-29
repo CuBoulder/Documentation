@@ -1,4 +1,4 @@
-# **Creating A Site**
+# Creating a Site
 
 you will need a number of things to create a new site:
 
