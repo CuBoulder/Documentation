@@ -33,6 +33,6 @@ if case number 2. above, skip to step 5. You will not be creating a new producti
         - `terminus backup:create PROD_SITE_NAME.live`
     - `terminus import:files PROD_SITE_NAME.live FILES_URL_YOU_GOT_EARLIER`
     - `terminus import:database PROD_SITE_NAME.live DATABASE_URL_YOU_GOT_EARLIER`
-6. [configure](Pantheon-configure_a_site) the production site
+6. [configure](Pantheon-configuring_a_site) the production site
 7. Add the site to the agcdn
     - TODO: docs for this!

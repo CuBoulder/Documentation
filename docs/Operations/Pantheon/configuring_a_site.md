@@ -1,4 +1,4 @@
-# **Configure a site**
+# Configuring a Site
 
 In order for a D7-WebExpress site to work properly on Pantheon there are a number of variables to set and modules enable and disable. Use the following lists to make the correct settings.
 

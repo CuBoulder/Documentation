@@ -33,9 +33,9 @@ There are many steps involved in creating a site on Pantheon. Most of these step
 
     - `terminus remote:drush SITE_NAME.live -- si express -y`
 
-6. [configure](Pantheon-configure_a_site) the site
+6. [configure](Pantheon-configuring_a_site) the site
 
-    - use the (configure a site)[Pantheon-configure_a_site] docs to set site variables and enable/disable modules (be sure to follow the order of enabling/disabling given there!)
+    - use the (configure a site)[Pantheon-configuring_a_site] docs to set site variables and enable/disable modules (be sure to follow the order of enabling/disabling given there!)
     - use `terminus remote:drush SITE_NAME.live -- vset VARIABLE_NAME VARIABLE_VALUE` for setting site variables
     - use `terminus remote:drush SITE_NAME.live -- en MODULE_NAME` to enable modules
     - use `terminus remote:drush SITE_NAME.live -- dis MODULE_NAME` to disable modules
