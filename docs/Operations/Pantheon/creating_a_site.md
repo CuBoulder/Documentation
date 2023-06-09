@@ -4,8 +4,12 @@ you will need a number of things to create a new site:
 
 - terminus [installed](Pantheon-index#user-content-terminus)
 - the site name
-
-    - if this is a new site intended for site owners/editors to develop it does not need to be the final name used for a launched site.
+    - We have naming conventions for our site names. Please be sure to follow them. Firstly, see [this page](https://www.colorado.edu/webcentral/get-help/url-standards) for general conventions and then replace any '/' with '-'. In addition, each type of site needs a particular prefix:
+        - a development site uses the prefix `ucbdev-`
+        - training sites use `ucbtraining-`
+        - a site that we host on Pantheon that shows up on colorado.edu as a subdomain (www.SUBDOMAIN.colorado.edu) uses `ucbsub-`
+        - a production site uses `ucb-`   
+    - If this is a new site intended for site owners/editors to develop it does not need to be the final name used for a launched site. Just make a easily decipherable name. We create a new site upon site launch with a name that follows url guidelines and that site owners have agreed to.
 
 - the name or id of an upstream
 
