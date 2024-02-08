@@ -32,7 +32,7 @@ The University of Colorado Boulder is a large organization with many different d
 3100 Marine St. Boulder, 80309  
 5th floor
 
-We have an office (which number?) to use when we wish to be on campus, otherwise we work remotely.
+Currently, all of our team members work fully remotely.  However if a team member, now or in the future, would prefer to have a more traditional work enviornment (aka office-space) accomodation on the 5th floor of the ARC building will be made.  
 
 ## our projects
 
@@ -40,15 +40,13 @@ The main projects we are working on now are listed below. We often have other th
 
 1. New CMS
     - We are building a new version of our Web Express CMS which is designed to allow site builders and editors, who likely do not know how to code, to build rich web experiences through www.colorado.edu branded websites.
-    - It is built using Drupal 9.
-2. Migration of sites from old D7 Web Express to new CMS
-    - In addition to 1. above, this includes migration of databases, files and training of users of the new CMS, among other things.
+    - It is built using the latest version of Drupal as a foundation with significant customomization on top.
+2. Migration of sites from current D7 Web Express to the new CMS
+    - We are currently (as of the start of 2024) beginning the migration process and expect that the migration of the over 1300 websites that make up the www.colorado.edu website will be mostly if not completely finished by the end of the calendar year.  
 3. Oghma
     - This is a new application and API that will be the center of knowledge and management tool for our websites
 4. Old Drupal 7 based CMS.
-    - This is a powerful tool that our clients have come to rely on for many things.
-    - Drupal 7 is coming up against end of life date
-    - Needs to be updated to new tool
+    - we are responsible for care and maintenance of the legacy CMS system that is still widely used until the migration process is completed.   
 
 ## development principles  
 
@@ -57,13 +55,25 @@ Particularly with respect to Drupal development, but for custom development we a
 - Keep it simple
 - Keep it close to core
 - Keep it secure
+- Keep it maintainable
 - Keep it scalable
 - Keep improving
 
+## aspirational development principles 
+
+These are things the teams believes are important but we can't yet claim to be doing well.  We hope to make improvments in this space and move these into the devlopment principles in the future.  Many will be more targeted projects once the migration work listed above is completed. 
+
+- Keep it documented 
+  - There is another team that works to document the UI/UX of the Web Express product, we're referring specifically to the technial documentation, including architecture decision records.
+- Keep it tested 
+  - Test-Driven Development would be ideal but getting usability and visual regression testing added in will be the next step
+- Keep changes logged 
+  - We currently are logging change within individual repos however we don't currently have a good mechanism to show the changes the Web Express product across the dozens of repos that make up its codebase. 
+
 ## team values
 
-- We are transparent by default
-- We assume good intentions
+- We are transparent by default 
+- We assume good intentions and are happy to share our own good intentions whenever asked
 - We are all on the same team and want to present a unified front
 - We are committed to making steady, meaningful and continuous improvements
 - We are committed to principles of inclusion and equity and we strive to collaborate well with others
