@@ -42,7 +42,7 @@ The main projects we are working on now are listed below. We often have other th
     - We are building a new version of our Web Express CMS which is designed to allow site builders and editors, who likely do not know how to code, to build rich web experiences through www.colorado.edu branded websites.
     - It is built using the latest version of Drupal as a foundation with significant customomization on top.
 2. Migration of sites from current D7 Web Express to the new CMS
-    - We are currently (as of the start of 2024) beginning the migration process and expect that the migration of the over 1300 websites that make up the www.colorado.edu website will be mostly if not completely finished by the end of the calendar year.  
+    - We are currently (as of February 2024) beginning the migration process and expect that the migration of over 1,300 websites that make up the www.colorado.edu site will be mostly, if not completely, finished by the end of the calendar yeari 2024.  
 3. Oghma
     - This is a new application and API that will be the center of knowledge and management tool for our websites
 4. Old Drupal 7 based CMS.
