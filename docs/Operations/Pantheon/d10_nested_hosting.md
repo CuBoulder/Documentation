@@ -10,7 +10,9 @@ In Drupal 7 we were able to rewrite the site's domain and path in each site's we
 
 Actually, this doesn't work in Drupal 10 as it does not allow the sites domain and similar to be overwritten in the settings.php file, which is probably a good thing. In fact, a special module needs to be created to take care of this. Thankfully, Pantheon has created just such a module -> [pantheon_domain_masking](https://github.com/pantheon-systems/pantheon_domain_masking).
 
-## Setup D10 Site
+## Setup for a nested D10 Site
+
+Normally we have a developoment site that a customer has used to build their site. When this customer is ready to have it published we 'launch', which is the process of making it available as a nested colorado.edu site. This involves copying files and the database from the development site as well as the steps below, that are the focus here.
 
 1. make sure you include the pantheon_domain_masking module in your composer.json file
 2. create the site on Pantheon in the regular way (make sure to use the correct upstream etc)
@@ -27,7 +29,7 @@ Actually, this doesn't work in Drupal 10 as it does not allow the sites domain a
 - log into the [AGCDN Dashboard](https://agcdn.ps-pantheon.com/acdn-management/) using you CU identikey and password
 - wait a few moments for the page to load
 - click 'edit' for the `req_metadata_v1_01` item in the list and wait again for a few moments for it to load correctly.
-- scroll to the bottom of the page and click 'add' a
+- scroll to the bottom of the page and click 'add'
 - type `colorado-edu-allenvs/<cu_path>/*` and click 'enter'
 - type `dm=<site_name>.agcdn.colorado.edu|preset=drupal8
     - even though our codebase is D10 or later, ther preset is **_supposed_** to be 'drupal8'
