@@ -21,16 +21,16 @@ you will need a number of things to create a new site:
 There are many steps involved in creating a site on Pantheon. Most of these steps use the terminus cli, so open up your terminal! Some of these steps take several minutes or more to complete. Terminus prints out helpful progress messages, but be prepared to spend +- 25 minutes to create a site.
 
 1. `terminus auth:login --machine-token=WEBSUPPORT_MACHINE_TOKEN`
-2. `terminus site:create --org="University of Colorado Boulder" -- SITE_NAME SITE_NAME UPSTREAM`
-
+2. `terminus site:create SITE_NAME SITE_NAME UPSTREAM --org="University of Colorado Boulder"`
     - for D7 sites use `pantheon_upstream_express_production` for the upstream
     - for D10 sites use `tiamat_production` for the upstream
+    - be sure to use the correct site name pattern -> TODO: NAMING CONVENTIONS DOCUMENTATION
 
 3. Get the git repo for the site (only available on the dev environement)
 
     1. `termiinus connection:info SITE_NAME.dev --format=json`
-    2. copy the saml private directory to the project's root level directory (should be one level above the `web` directory)
-    3. copy the git command and run it in the directory where you want to save the code
+    3. copy the git command and run it in the directory where you want to save the site's code
+    2. copy the saml private directory to the site's root level directory (should be one level above the `web` directory)
     4. __ONLY FOR D7 SITES__: copy our D7-WebExpress settings.php file into the `web/sites/default` directory (our D10 sites no longer need such a settings file)
     5. add, commit, and push the code back up to pantheon
 
