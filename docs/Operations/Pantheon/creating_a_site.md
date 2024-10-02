@@ -47,7 +47,7 @@ There are many steps involved in creating a site on Pantheon. Most of these step
 6. [configure](Pantheon-configuring_a_site) the site
 
     - **FOR D10 SITES**
-        - TODO: is there any configuration that needs to be done at site installation?
+        - At this point all default configuration is taken care of in the install profile.
 
     - **FOR D7 SITES**
 
