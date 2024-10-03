@@ -45,7 +45,22 @@ This documentation uses the 'new Control Panel'. If you are using the 'legacy Co
 
 ### go to [search console](https://search.google.com/search-console?hl=en&utm_source=wmx&utm_medium=deprecation-pane&utm_content=home&resource_id=https://www.colorado.edu/)
 
-- you have to be authenticated as websupport@colorado.edu
+### add property (for new sub-domain sites only) and verify it
+
+Subdomain sites need their own property added since they are not stacked onto colorado.edu
+
+- Click the drop-down menu in the top left corner, just onder the 'Google Search Console' title and icon.
+- click 'add property'
+- enter the subdomain + domain (SUBDOMAIN.colorado.edu) to the 'Domain' option and click continue
+- to verify ownership of the domain:
+    - copy the text record that needs to be added to DNS settings
+    - open up a ticket with [OIT Service Now](https://colorado.service-now.com/sncms/dashboard.do) and write that you need to add the copied text record to the site's DNS settings.
+    - the property should automatically verify itself in the console when OIT has completed the DNS changes.
+
+### settings for all sites
+
+- select the property (www.colorado.edu for all stacked sites or the subdomain added as detailed above) from the drop-down list just below 'Google Search Console' title
+- you must be authenticated as websupport@colorado.edu
   - click "Settings" down towards the bottom of left sidebar
   - click "ownership verification" and do what you need to do
 - click "Sitemaps" in the left sidebar
@@ -59,6 +74,7 @@ This documentation uses the 'new Control Panel'. If you are using the 'legacy Co
 - clone the site's codebase (On Pantheon)
 - update value of the variable "$conf["google_cse_cx"]" to the Search engine ID you copied earlier.
 - add, commit, and push the code back up to master (on Pantheon)
+
 
 ## Final steps
 
