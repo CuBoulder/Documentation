@@ -86,7 +86,9 @@ Subdomain sites need their own property added since they are not stacked onto co
     - add `results` to the Path form field
     - add the Search engine ID in the 'Google Programmable Search Engine ID' form field
     - save the changes
-- in the search pages section make sure the new 'Google Programmable Search' page is set to the default search by selecting the drop down arrow next to the 'default' button
+- in the search pages section make sure the new 'Google Programmable Search' page is set to the default search by selecting the drop down arrow next to the 'Edit' button
+- in the search pages section disable the newly non-default 'Content' search by selecting the dropdown arrow next to the 'Edit' button
+- click 'Save Configuration' for good measure
 - go to `/admin/config/cu-boulder/general` and click the 'Advanced' section
     - select 'this site' under 'Enable searching' section
     - add '/search/results' to Search Page form field
