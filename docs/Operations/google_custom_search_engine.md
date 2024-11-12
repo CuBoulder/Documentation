@@ -80,15 +80,17 @@ Subdomain sites need their own property added since they are not stacked onto co
 
 ### D10
 
-- Log into a site and go to `/admin/config/search/pages`. You need to add a new search type and select Google Programmable Search from the dropdown.
-- In the new search edit page:
-    - add `results` to the Path form field.
-    - add the Search engine ID in the 'Google Programmable Search Engine ID' form field.
-    - Save the changes.
-- Go to `/admin/config/cu-boulder/general` and click the 'Advanced' section.
-    - Select 'this site' under 'Enable searching' section.
-    - Click 'Save Configuration' at the bottom of the page.
-
+- log into a site and go to `/admin/config/search/pages`
+- scroll down to the search pages section and add a new search type and select 'Google Programmable Search' from the dropdown
+- in the new search edit page:
+    - add `results` to the Path form field
+    - add the Search engine ID in the 'Google Programmable Search Engine ID' form field
+    - save the changes
+- in the search pages section make sure the new 'Google Programmable Search' page is set to the default search by selecting the drop down arrow next to the 'default' button
+- go to `/admin/config/cu-boulder/general` and click the 'Advanced' section
+    - select 'this site' under 'Enable searching' section
+    - add '/search/results' to Search Page form field
+    - click 'Save Configuration' at the bottom of the page
 
 ### D7
 
