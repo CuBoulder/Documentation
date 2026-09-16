@@ -8,7 +8,10 @@
 
 ### How is Drupal used at CU?
 
-Our sites use Drupal to allow users to create their own websites. We create new features for Drupal so our users can have the tools they need to create the content for their sites. For example, https://colorado.edu is built using Drupal.
+Our sites use Drupal to allow users to create their own websites. We create new features for Drupal so our users can have the tools they need to create the content for their sites. For example, https://colorado.edu is built using Drupal, on a framework we call Web Express
+
+### Web Express
+Developed and maintained by our team, Web Express is CU Boulder’s web publishing platform built on top of Drupal. Branded and accessible, it can be used by campus units, departments and groups to support content, marketing and communication goals and is provided as a campus service by Strategic Relations and Communications (SRC). It primarily consists of a custom CU-branded theme, 20 custom modules, an installation profile, and a custom entities module which is used to support configuration for custom nodes, blocks, layouts, settings and more. 
 
 ---
 
@@ -20,53 +23,75 @@ We use [Composer](https://getcomposer.org/) php package manager to install Drupa
 
 Run `which composer` to check if composer is installed. If it's not installed, [install composer](https://getcomposer.org/download/)
 
-### Intalling Lando & Docker
+### Installing DDEV & OrbStack
 
-Lando is a local environment tool that runs on Docker to create a container for a website. Open terminal and type `which lando`. If a path is printed, then you already have lando installed and can go to the next step. Otherwise, follow the steps to [install Docker](https://docs.docker.com/desktop/mac/install/) and then [install Lando](https://docs.lando.dev/basics/installation.html#macos). Both of these are needed to launch your own tiamat project template!
+For local Drupal development, we use **DDEV** with **OrbStack**.
+
+[OrbStack](https://orbstack.dev/) provides the container runtime, while [DDEV](https://ddev.com/) manages the local Drupal environment, including PHP, the database, web server, and project URLs.
+
+To check whether DDEV is installed, run:
+
+```bash
+which ddev
+```
+
+If nothing is returned, install [OrbStack](https://orbstack.dev/) first, then [DDEV](https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/).
+
+Useful commands:
+
+```bash
+ddev start
+ddev describe
+ddev stop
+```
+
+`ddev describe` shows the project's local URLs, services, ports, and environment details.
 
 ### Drush
 
 [Drush](https://www.drush.org/latest/) is a command line utility for interacting with a Drupal site. It’s extremely useful and learning the commands will make development much faster. Since the dev site is using Lando, we must prefix all drush commands with lando, as you will see in some commands in the tiamat section.
 
+```bash
+ddev drush cr
+ddev drush cim
+ddev drush updb
+```
 ---
 
 ## Site Development
 
-### Contributing Code - Tiamat (boulder_d9_base)
+### Contributing Code - Sandpoint (boulder_base)
 
-We use our [tiamat project template](https://github.com/CuBoulder/tiamat-project-template) to quickly get a development version of tiamat (Drupal running off a Lando container in Docker) running. DO NOT use this branch in production! The production composer.\* files can be found on the production branch.
+We use our [D11 Sandpoint project template](https://github.com/CuBoulder/sandpoint-d11-project-template) to quickly get a development version of Web Express (Drupal running off a DDEV container in OrbStack) running. DO NOT use this branch in production! The production composer.\* files can be found on the production branch.
 
-### Tiamat Installation
+### Sandpoint Installation
 
-```
+```bash
 composer -V             # verify that your machine has composer 2.x installed
 
-git clone https://github.com/CuBoulder/tiamat-project-template <project-name>
+git clone https://github.com/CuBoulder/sandpoint-d11-project-template <project-name>
 
 cd <project-name>
 
-open .lando.yml file and replace the name value on line 1 with your project name.
-This is what docker will use to build your container, so be sure to make the project name unique from other containers.
+ddev start             # initializes your container
 
-lando start             # this command will take a while if it's the first it's being run
-lando install-site      # this installs Drupal
+ddev composer install # pulls in our theme, profile, and contrib/custom modules
+ddev install-site      # runs a script that installs Drupal to your container
 
 ```
 
 Other useful commands:
 
-```
-lando info   ##Prints info about your app including urls to visit your page, database info and more
+```bash
+ddev launch   ## Opens your site in a browser
 
-lando nosso  ## allows local logins and disables SSO via command
-
-lando drush pmu simplesamlphp_auth 	 ## allows local logins and disables SSO via direct uninstall
+ddev describe ## Displays the current DDEV project's configuration and status, including URLs, services, ports, and environment details.
 
 ```
 
-Enable Debugging with Twig, allowing you to see what Twig templates need to be created for your new page
+Enable Debugging with Twig via CLI, allowing you to see what Twig templates need to be created for your new page. You may also configure debug mode via Drupal UI. It is found under Configuration -> Development -> Development Settings -> Twig Development Mode
 
-```
+```bash
 cd sites/default && sudo cp default.services.yml services.yml   ## creates a services.yml file
 
 sudo chown <USERNAME> services.yml     ## May be needed to change read/write access of your new services.yml file
@@ -74,7 +99,7 @@ sudo chown <USERNAME> services.yml     ## May be needed to change read/write acc
 
 In your newly created services.yml file, change debug to `debug:true` and save. This will allow you to Inspect the webpage with your Browser Dev Tools to begin planning your templates.
 
-Run `lando info` to see where your new site is hosted! See the above useful commands for allowing local logins, twig debugging, then sign in with the default credentials and you're all ready to get building!
+Run `ddev describe` to see where your new site is hosted, or open automatically with `ddev launch` See the above useful commands for allowing local logins, twig debugging, then sign in with the default credentials and you're all ready to get building!
 
 ### Site Building
 
@@ -93,7 +118,7 @@ In the Slogan Form input, type `Strategic Relations and Communications`. Below t
 
 Modules extend the functionality of the site. Installing a module is done in two parts, adding the composer package, and enabling it on the site itself. We are going to install the Conditional Fields module. You can find more modules on the [Drupal Website](https://www.drupal.org/project/project_module). In the project root, run the following:
 
-```
+```bash
 composer require ‘drupal/conditional_fields:^4.0@alpha’
 ```
 
@@ -105,7 +130,7 @@ Contributed modules come from [Packagist](https://packagist.org/), the main comp
 
 ### Theme Development
 
-[Themes](https://www.drupal.org/docs/theming-drupal) give a site its look. The theme installed by default is the CU Boulder site theme. In the `/themes` directory of your `tiamat project` you will both contributed and our custom CU Boulder theme which includes CSS, JS, Twig Templates, external libraries like BootStrap and FontAwesome and more! Here is where you will build out Twig templates, build CSS and JS files for your pages, and link those newly created files to our `boulderD9_base.libraries.yml`
+[Themes](https://www.drupal.org/docs/theming-drupal) give a site its look. The theme installed by default is the CU Boulder site theme. In the `/themes` directory of your `Sandpoint project` you will both contributed and our custom CU Boulder theme which includes CSS, JS, Twig Templates, external libraries like BootStrap and FontAwesome and more! Here is where you will build out Twig templates, build CSS and JS files for your pages, and link those newly created files to our `boulder_base.libraries.yml`
 
 ### Module Development
 
@@ -117,19 +142,19 @@ Much of module development is looking at existing module source code and using t
 
 ## Site Development
 
-### Nested Repositories within Tiamat
+### Nested Repositories within Sandpoint
 
-Starting the app for the first time will install all the composer dependencies and clone down all of the CU Boulder modules. Even though the modules are composer packages, they are cloned with git so we can do development work on them. These modules include `tiamat-custom-entities`, `tiamat-profile`, and our custom UCB modules such as `ucb_default_content` which are stored within `modules/custom`.
+Starting the app for the first time will install all the composer dependencies and clone down all of the CU Boulder modules. Even though the modules are composer packages, they are cloned with git so we can do development work on them. These modules include `ucb_custom_entities`, `boulder_profile`, and our custom UCB modules such as `ucb_default_content` which are stored within `modules/custom`.
 
-### Branching with Tiamat
+### Branching with Sandpoint
 
 In order to test a PR or to develop for a new issue/feature/bug, you will need to switch to the appropriate branches on each repository. Depending on the ticket assigned for review or developement, your work may touch one or more of these repos.
 
 The repos you may need to check are:
 
-- `themes/custom/boulder_d9_base`
-- `modules/custom/ucb_d9_custom_entities`
-- `profiles/custom/boulder_d9_profile`
+- `themes/custom/boulder_base`
+- `modules/custom/ucb_custom_entities`
+- `profiles/custom/boulder_profile`
 - `modules/custom/**` (For work with custom modules)
 
 
@@ -137,13 +162,13 @@ Make sure your repos are up to date before creating a branch with `git fetch -a`
 
 To checkout to a branch for code review, run the following on each repo that may have new code, which includes the 5 above repos:
 
-```
+```bash
 git checkout -b <LOCALBRANCHNAME> origin/<REMOTEBRANCHNAME>
 ```
 
 ### Pushing Code
 
-Once you have something ready for commit, or you have code that is tested, working, and ready for a pull request-- the code push process works as you would expect. In each of the repos that resides in our tiamat project, we will need to push that new code to its respective remote repository. Do not push to tiamat remote repo, just the afformentioned custom repositories that reside within your tiamat project.
+Once you have something ready for commit, or you have code that is tested, working, and ready for a pull request-- the code push process works as you would expect. In each of the repos that resides in our Sandpoint project, we will need to push that new code to its respective remote repository. Do not push to Sandpoint remote repo, just the afformentioned custom repositories that reside within your Sandpoint project.
 
 `cd` into any repository that you have been working in. You can run `git status` in each custom repo to see what files were modified. `git add <filename>` any files you have changed that are included in the ticket, and `git push` to the respective branch in that remote repository.
 
