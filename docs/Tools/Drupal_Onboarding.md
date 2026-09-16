@@ -4,14 +4,12 @@
 
 ### What is Drupal?
 
-[Drupal](https://www.drupal.org/about) is a content management system (CMS) similar to Wordpress, Wix, Squarespace, etc. This software allows users to organize and create content on a site without any coding experience. What sets Drupal apart from the others is the ability to customize the CMS and add complex features.
-
-### How is Drupal used at CU?
-
-Our sites use Drupal to allow users to create their own websites. We create new features for Drupal so our users can have the tools they need to create the content for their sites. For example, https://colorado.edu is built using Drupal, on a framework we call Web Express
+[Drupal](https://www.drupal.org/about) is a content management framework which allows developers to create a custom web Content Management System (CMS).  
 
 ### Web Express
-Developed and maintained by our team, Web Express is CU Boulder’s web publishing platform built on top of Drupal. Branded and accessible, it can be used by campus units, departments and groups to support content, marketing and communication goals and is provided as a campus service by Strategic Relations and Communications (SRC). It primarily consists of a custom CU-branded theme, 20 custom modules, an installation profile, and a custom entities module which is used to support configuration for custom nodes, blocks, layouts, settings and more. 
+Web Express is the main web CMS solution created, developed and maintained by the SRC Development and Operations team to allow for the creation of web sites and content on the primary CU Boulder domain (https://www.colorado.edu).  Web Express is built on top of the Drupal framework and utilizes code developed by the core Drupal team, other open-source contributors as well as many custom modules developed by the CU Boulder team.    
+
+The goal of Web Express is to faciliated the creation of content that can be published in a secure, branded and accessible manner for anyone who has a buisiness need to publish content on https://www.colorado.edu.
 
 ---
 
