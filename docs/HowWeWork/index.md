@@ -1,7 +1,7 @@
 # How We Work
 
 ## Who We Are
-We are the Devleopment and Operations teams charged with stewardship of Web Express, the main web CMS tool for creating websites for the primary CU Boulder website (https://www.colorado.edu).  
+We are the Devleopment and Operations teams charged with stewardship of Web Express, the main web CMS tool for creating websites under the primary CU Boulder domain (https://www.colorado.edu).  
 
 ## Where do we sit within the heirarchy at CU Boulder
 
@@ -47,7 +47,7 @@ These are things the teams believes are important but we can't yet claim to be d
 - Keep it tested 
   - Test-Driven Development would be ideal but getting usability and visual regression testing added in will be the next step
 - Thoughtful custom development
-  - Don't default to creating something new.  Don't reinvent the wheel.  Custom development is expensive, only being the process after throughtful evaluation and consideration of the alternatives.  But fully commit once custom development begins.  
+  - Don't default to creating something new.  Don't reinvent the wheel.  Custom development is expensive, only begin the development process after throughtful evaluation and consideration of the alternatives.  But fully commit once custom development begins.  
 
 ## Team Values
 
