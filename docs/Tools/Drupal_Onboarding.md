@@ -9,7 +9,7 @@
 ### Web Express
 Web Express is the main web CMS solution created, developed and maintained by the SRC Development and Operations team to allow for the creation of web sites and content on the primary CU Boulder domain (https://www.colorado.edu).  Web Express is built on top of the Drupal framework and utilizes code developed by the core Drupal team, other open-source contributors as well as many custom modules developed by the CU Boulder team.    
 
-The goal of Web Express is to faciliated the creation of content that can be published in a secure, branded and accessible manner for anyone who has a buisiness need to publish content on https://www.colorado.edu.
+The goal of Web Express is to faciliate the creation of content that can be published in a secure, branded and accessible manner for anyone who has a buisiness need to publish content on https://www.colorado.edu.
 
 ---
 
