@@ -49,7 +49,7 @@ ddev stop
 
 ### Drush
 
-[Drush](https://www.drush.org/latest/) is a command line utility for interacting with a Drupal site. It’s extremely useful and learning the commands will make development much faster. Since the dev site is using Lando, we must prefix all drush commands with lando, as you will see in some commands in the tiamat section.
+[Drush](https://www.drush.org/latest/) is a command line utility for interacting with a Drupal site. It’s extremely useful and learning the commands will make development much faster. Since the dev site is using Lando, we must prefix all drush commands with lando, as you will see in some commands in the Sandpoint section.
 
 ```bash
 ddev drush cr
@@ -158,7 +158,7 @@ The repos you may need to check are:
 - `modules/custom/**` (For work with custom modules)
 
 
-Make sure your repos are up to date before creating a branch with `git fetch -a` and then checkout the available branches with `git branch -a` in the above repo locations within the tiamat project to confirm your local project is up to date with the remote repo with the most current available remote branches. Run a `git status` to make sure you are up to date, `git pull` any changes if not.
+Make sure your repos are up to date before creating a branch with `git fetch -a` and then checkout the available branches with `git branch -a` in the above repo locations within the Sandpoint project to confirm your local project is up to date with the remote repo with the most current available remote branches. Run a `git status` to make sure you are up to date, `git pull` any changes if not.
 
 To checkout to a branch for code review, run the following on each repo that may have new code, which includes the 5 above repos:
 
