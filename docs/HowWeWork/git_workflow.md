@@ -1,145 +1,23 @@
 # Git Workflow
 
-[Quick Visualization](https://docs.google.com/a/colorado.edu/drawings/d/1RAm8Xrvke9r-N1uMoWq_18XQBFo4fhVZ_lPw7t4k0w0/edit?usp=sharing)
+## General Guidelines
 
-## Permanent Branches
+### Development
+- <strong>Do not work directly on main.</strong>
+- Create or identify an existing GitHub issue before beginning development work.
+- Use one branch per issue. Try not to do everything at once, unless appropriate.
+- Try to name issue branches using the issue number: `issue/#123`
+- Keep each branch focused on the work described in its GitHub issue. Don't let the branch's scope creep.
+- Try to use clear, descriptive commit messages that explain what changed. For example, `Updated Article List Block CSS` is more useful than `update`.
+- Push changes to the issue branch you're working from, <strong>not directly to main</strong>.
+- You can reference the issue number in commit messages using #<number>.
+- Avoid long-lived development branches when possible. Branches should exist only for as long as the associated work is active.
 
-- **Main**
-  - Deployed manually to PROD. Commits to this branch are tagged releases. Named master. Tags are in the pattern x.y.z.
-- **Dev**
-  - Deployed periodically to DEV. Named dev.
-
-## Temporary Branches
-
-- **Release**
-  - Deployed manually to TEST. Branched from dev. Named in the pattern release/[x.y.z].
-- **Hotfix**
-  - Deployed manually to TEST. Branched from main. Named in the pattern hotfix/[issue-key] (issue-key is like FIT-1234).
-- **Feature**
-  - Not deployed. Branched from dev. Named in the pattern feature/[issue-key].
-- **Bug**
-  - Not deployed. Branched from release-[x.y.z]. Named in the pattern bug/[issue-key].
-
-## Commands
-
-### **Start a Feature**
-
-```bash
-cd [path/to/git/repo]
-git fetch --all
-git checkout -b feature/[issue-key] dev
-git push --set-upstream origin feature/[issue-key]
-```
-
-### **Start a Bug**
-
-```bash
-cd [path/to/git/repo]
-git fetch --all
-git checkout -b bug/[issue-key] release/[version.to.release]
-git push --set-upstream origin bug/[issue-key]
-```
-
-### **Start a Hotfix**
-
-```bash
-cd [path/to/git/repo]
-git fetch --all
-git checkout -b hotfix/[issue-key] [tag.for.last-release]
-git push --set-upstream origin hotfix/[issue-key]
-```
-
-### **Add Commit Message**
-
-```bash
-cd [path/to/git/repo]
-git add -A # stage all changed files
-git commit -m "A short sentence or two stating what has changed."
-```
-
-### **Push Changes to Remote**
-
-(first commit your changes locally)
-
-```bash
-git push origin [branchname] 
-```
-
-### **Start a Release**
-
-```bash
-cd [path/to/git/repo]
-git checkout dev
-git pull
-git checkout -b release/[version.to.release] dev
-git push --set-upstream origin release/[version.to.release]
-```
-
-### **Merge a Feature**
-
-```bash
-cd [path/to/git/repo]
-git fetch
-git checkout dev
-git pull
-git merge --no-ff feature/[issue-key] # Same as merging Github Pull Request
-git push origin dev
-```
-
-### **Merge a Bug**
-
-```bash
-cd [path/to/git/repo]
-git checkout release/[version.to.release]
-git pull
-git merge --no-ff bug/[issue-key] # Same as merging Github Pull Request
-git push origin release/[version.to.release]
-git checkout dev
-git pull
-git merge --no-ff bug/[issue-key]  # Same as merging Github Pull Request
-git push origin dev
-```
-
-### **Merge a Hotfix**
-
-```bash
-cd [path/to/git/repo]
-git checkout main
-git pull
-git merge --no-ff hotfix/[issue-key] # Same as merging Github Pull Request
-git tag -a [version.to.release]
-git push origin main
-git push origin --tags
-git checkout dev
-git pull
-git merge --no-ff hotfix/[issue-key]  # Same as merging Github Pull Request
-git push origin dev
-```
-
-### **Finalize a Release**
-
-```bash
-cd [path/to/git/repo]
-git checkout main
-git pull
-git merge --no-ff release/[version.to.release]  # Same as merging Github Pull Request
-git tag -a v[version.to.release] -m "release [version.to.release] added"
-git push origin --tags
-git checkout dev
-git pull
-git merge --no-ff release/[version.to.release]  # Same as merging Github Pull Request
-git push origin dev
-```
-
-## Rules of thumb for "Should I merge this?"
-
-- main does not get merged into any other branch.
-- Hotfix branches merge into main and dev only.
-- Bug branches merge into release and dev only.
-- Feature branches merge into dev only.
-- dev can be merged into feature branches.
-
-## Reading and Source material
-
-- <http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow>
-- <https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac>
+### Pull Requests
+- Once work is completed, you may open a Pull Request.
+- Keep Pull Requests focused on the issue they address. Unrelated work should generally be handled in a separate issue and branch.
+- Make sure your branch is up to date with the default branch when needed, especially before merging. 
+- Resolve merge conflicts and verify the changes before requesting Review or completing another team member's Pull Request.
+- Make sure your PR passes the automatic linter checks before requesting Review.
+- You can use GitHub's closing syntax to automatically close out Issues: `Resolves #123` , `Closes #123`, `Fixes #123` will all automatically close as completed the tagged Issues once the Pull Request is merged
+- After reviewing a pull request, the reviewer should delete Issue branches after they have been merged.
