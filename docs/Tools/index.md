@@ -32,10 +32,10 @@ There are others worth consideration but the above are used by team members and 
 - [venv](https://docs.python.org/3/library/venv.html)
   - used for creating virtural environments for local Python development (included with Python now)
 - [Node](https://nodejs.org/en/)
-  - mainly used for running automated tests via Playwrite
-  - you might use it for command line apps or APIs, too
+  - Mainly used for running automated tests via Playwright, or compiling CKEditor5 plguins
+  - You might use it for command line apps or APIs, too
 - [Npm](https://www.npmjs.com/)
-  - for node/javascript package management
+  - For node/javascript package management
 - JavaScript
 - TypeScript
   - for some CKEditor5 modules
