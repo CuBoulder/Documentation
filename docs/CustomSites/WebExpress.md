@@ -26,6 +26,6 @@ The FixIt website is used by on-campus resisdents to enter work orders for repai
 
 ## Bulletin 
 Site URL : https://www.colorado.edu/bulletin 
-Custom Module : https://github.com/CuBoulder/ucb_tma_form_handler
+Custom Module : https://github.com/CuBoulder/ucb_subtonode 
 
 The Bulletin website is a place where the CU Boulder community can submit information that may be of more general information to others in the community.  This works by allowing authenticated users to fill out a webform submission.  Site Managers on the site can approve or reject these submissions and when a submission is accepted a custom module turns that submission into a node to be displayed on the main page view of this content.  
