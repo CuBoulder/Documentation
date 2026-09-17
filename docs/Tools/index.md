@@ -13,10 +13,8 @@ Here is a basic list of tools and technologies that we use frequently:
 ### **IDEs**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-  - free and very capable
-  - most of us here use it
 - [JetBrains](https://www.jetbrains.com/)
-  - not free but great IDEs
+- Other Recommendations:
   - PhpStorm
   - PyCharm
   - WebStorm
@@ -34,11 +32,13 @@ There are others worth consideration but the above are used by team members and 
 - [venv](https://docs.python.org/3/library/venv.html)
   - used for creating virtural environments for local Python development (included with Python now)
 - [Node](https://nodejs.org/en/)
-  - mainly used for running automated tests via Playwrite
-  - you might use it for command line apps or APIs, too
+  - Mainly used for running automated tests via Playwright, or compiling CKEditor5 plguins
+  - You might use it for command line apps or APIs, too
 - [Npm](https://www.npmjs.com/)
-  - for node/javascript package management
-- Javascript
+  - For node/javascript package management
+- JavaScript
+- TypeScript
+  - for some CKEditor5 modules
 - CSS
   - for a few of its modern features check [this](https://css-tricks.com/whats-new-since-css3/) out
 - HTML
@@ -56,11 +56,11 @@ There are others worth consideration but the above are used by team members and 
 
 ### **Development stacks**
 
-We need working LAMP stacks for our Drupal projects. This is largely provided for by Lando (see below). Non-Drupal projects, for example and API built with Python, can normally be developed on our macs directly, with the understanding that their production environments will likely be Linux based.
+We need working LAMP stacks for our Drupal projects. This is largely provided for by DDEV (see below). Non-Drupal projects, for example and API built with Python, can normally be developed on our macs directly, with the understanding that their production environments will likely be Linux based.
 
 #### **_databases_**
 
-Although Lando more or less takes care of setting up databases, there may be a specific need in a project for you set one up yourself.
+Although DDEV more or less takes care of setting up databases, there may be a specific need in a project for you set one up yourself.
 
 Typically we use:
 
@@ -70,7 +70,7 @@ Typically we use:
 
 ## Beginning set up
 
-There are 2 technologies that we use for installing and/or using these languages: Homebrew and Lando. Generally, we do not need to install Xcode, however we will need to get access to the "Command Line Tools", commonly bundled with XCode.
+There are 3 technologies that we use for installing and/or using these languages: Homebrew, OrbStack, and DDEV. Generally, we do not need to install Xcode, however we will need to get access to the "Command Line Tools", commonly bundled with XCode.
 
 ### Command Line Tools
 Since Apple’s OS X is based on UNIX, you can run many of the UNIX commands on your Mac right from the Terminal app. In order to use these UNIX commands on your Mac, you need to have a utility called “Command Line Tools” installed on your machine. By default, OS X does not ship with this utility installed. One way to install Command Line Tools it is to install Xcode, and it will install these commands as well. However, Xcode is heavy in filesize an often takes hours to fully install on your machine so the full installation is not recommended unless it is absolutely necessary. 
@@ -97,16 +97,19 @@ brew install python@3.10
 brew install node
 ```
 
-### _Lando_
+### DDEV & OrbStack
 
-[Lando](https://lando.dev/) is a container managment tool that really helps software development go smoothly. Basically, it installs Docker and creates a container, with a complete development stack, for your application. This is very convenient for working with Drupal as it handles OS, server, database, and PHP for us.
+For local Drupal development, we use **DDEV** with **OrbStack**.
 
-To install it select the [latest release](https://github.com/lando/lando/releases). The installers are found in the 'assets' section. Download and run the appropriate installer for your computer:
+[OrbStack](https://orbstack.dev/) provides the container runtime, while [DDEV](https://ddev.com/) manages the local Drupal environment, including PHP, the database, web server, and project URLs.
 
-- If you have a new Mx based mac be sure to download the arm .dmg
-- If you have an older Intel mac download the x64 .dmg
+To check whether DDEV is installed, run:
 
-Be sure to checkout the Lando [documentation](https://docs.lando.dev/) for to get an idea for what it can do.
+```bash
+which ddev
+```
+
+If nothing is returned, install [OrbStack](https://orbstack.dev/) first, then [DDEV](https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/).
 
 ## Other tool docs
 
