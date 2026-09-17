@@ -19,8 +19,7 @@ The CU Boulder Today site is the main campus news site.  Content from this site 
 ## FixIt
 
 Site URL : https://fixit.colorado.edu 
-Custom Modules : https://github.com/CuBoulder/ucb_tma_interface 
-https://github.com/CuBoulder/ucb_tma_form_handler 
+Custom Module : https://github.com/CuBoulder/ucb_tma_interface 
 
 The FixIt website is used by on-campus resisdents to enter work orders for repairs to facilites owned and operated by CU Boulder.  They utilize a custom ticketing system known as TMA and these additional modules act as middleware to take the output for form submissions on the sites and submit them to the TMA back-end via and API.  Additionally there are form elements that are populated by the data coming from that TMA back end (e.g. build name and room nummber for those buildings).  
 
